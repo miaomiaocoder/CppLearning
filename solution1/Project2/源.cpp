@@ -8,6 +8,15 @@ int main()
 {
 	//string学习
 
+	//定义和初始化
+	//string s1; //默认初始化, s1 ="" :""空串表示这里边没有字符
+	//string s2 = "I love the world";//不包括末尾的\0
+	//string s3("I love the world");//和s2效果一样
+	//string s4 = s2;//拷贝
+	//
+	//int num = 6;
+	//string s5(num, 'a');//s5初始化为num个字符'a'的字符串
+	//会在系统内创建临时对象
 
 	//string构造函数和析构函数
 	/*
@@ -68,9 +77,8 @@ int main()
 	return 0;
 	*/
 
-	//c++获取字符串元素
 
-	
+	//c++获取字符串元素
 	//const std::string cs("c.biancheng.net");
 	//std::string s("abcde");
 	//char temp = 0;
@@ -150,6 +158,62 @@ int main()
 		<< setw(6) << names[i]
 		<< resetiosflags(ios::left)
 		<< setw(10) << values1[i] << endl;*/
-
 	
+	/*string s1;
+	if (s1.empty())
+	{
+		cout << "s1为空" << endl;
+	}*/
+
+	//size()/length():返回字节或字符数量
+	/*string s1;
+	cout << s1.size() << endl;
+	cout << s1.length() << endl;
+	string s2 = "I love china";
+	cout << s2.size() << endl;
+	cout << s2.length() << endl;
+	string s3 = "我爱女孩";
+	cout << s3.size() << endl;
+	cout << s3.length() << endl;*/
+
+	//string s4 = "abcd";
+	//string s5 = "hijk";
+	//string s6 = s4 + s5;
+	//cout << s6 << endl;
+	//s5 = s4;
+	//cout << s5 << endl;//取代
+	
+	//s.c_str();//返回一个字符串s中的内容指针
+	//返回一个指向正规的c字符串的指针常量，以\0结尾
+	//为了与c语言兼容引入
+	
+	//string s10 = "abC";
+	//const char*p = s10.c_str();//abC	
+	//char str[100];
+	//strcpy_s(str,sizeof(str),p);
+	//cout << str << endl;
+	//string s11(str);//用c语言字符串数组初始化
+	//
+	
+	//string s1 = "abc";
+	//string s2 = "defg";
+	//string s3 = s1 + " and " + s2 + 'e';
+	//cout << s3 << endl;//abc and defge
+
+	//string s5 = "abc" + "def"; //语法上不允许
+	//string s5 = "abc" + s1 + "def";//中间夹一个string对象，语法允许
+	//string s5 = "abc" + "def" + s2;//error
+
+	string s1 = "i love the world";
+	//for (auto c : s1)//auto类型自动推断 char
+	//{
+	//	cout << c << endl;
+	//}
+	for (auto &c : s1)
+	{
+		//toupper()把小写字符转成大写字符
+		c = toupper(c);//因为c是一个引用，相当于改变s1中的值
+	}
+	cout << s1 << endl;
+	return 0;
 }

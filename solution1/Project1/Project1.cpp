@@ -171,11 +171,23 @@ int main()
 	}
 */
 	//使用nullptr能够避免整数和指针之间发生混淆
-	cout << typeid(NULL).name() << endl;
-	cout << typeid(nullptr).name() << endl;
+	/*cout << typeid(NULL).name() << endl;
+	cout << typeid(nullptr).name() << endl;*/
 
 	//NULL和nullptr实际上是不同的类型
 	//conclusion 对于指针的初始化，用到和指针有关的场合，能用nullptr则用nullptr
+	//return 0;
+
+
+	int count = 10;
+	int& countRef = count;
+	auto myAuto = countRef;
+
+	countRef = 11;
+	cout << count << " ";
+
+	myAuto = 12;
+	cout << count << endl;
 	return 0;
 }
 

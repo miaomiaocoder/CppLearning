@@ -101,17 +101,81 @@ int main()
 	//	free(point);
 	//}
 
-	int*p = (int *)malloc(sizeof(int) * 100);
-	if (p != NULL)
-	{
-		int *q = p;
-		*q++ = 1;//==>*(q++); -->*q = 1; q++;
-		*q++ = 5;
-		cout << *p << endl;//1
-		cout << *(p+1) << endl;//5
-		free(p);
-	}
+	//int*p = (int *)malloc(sizeof(int) * 100);
+	//if (p != NULL)
+	//{
+	//	int *q = p;
+	//	*q++ = 1;//==>*(q++); -->*q = 1; q++;
+	//	*q++ = 5;
+	//	cout << *p << endl;//1
+	//	cout << *(p+1) << endl;//5
+	//	free(p);
+	//}
 
+	//new and delete :运算符（标识符）
+	//new , delete 比malloc, free干了更多的事
+	//new格式;
+	//1.指针变量名 = new 类型标识符;
+	//2.指针类型名 = new 类型标识符(初始值); // 注意这里是圆括号括起来，表示初始值
+	//3.指针类型名 = new 类型标识符[内存单元个数]; //注意这里是[]
+
+	/*int *myint = new int;
+	if (myint != NULL)
+	{
+		*myint = 8;
+		cout << *myint << endl; //打印出8
+		delete myint;
+	}*/
+	
+	//int *my_int = new int(18);
+	//if (my_int != NULL)
+	//{
+	//	//*my_int = 8;
+	//	cout << *my_int << endl;//打印出18
+	//	delete my_int;
+	//}
+
+	//int* pa = new int[100];//开辟100的整形数组空间
+	//if (pa != NULL)
+	//{
+	//	int *q = pa;
+	//	*q++ = 12;//[0] = 12
+	//	*q++ = 18;//[1] = 18 ,执行完这行,这个q指向[2]
+
+	//	cout << *pa << endl;;//12
+	//	cout << *(pa + 1) << endl;//18
+
+	//	delete[] pa;
+	//	//注意new 和 delete 配对， new用[]，delete也必须用[](不写数组大小)
+
+	//}
+	
+	//有malloc必有free, 有new 必有delete
+
+	
+	//三:nullptr : c++引入新的关键字
+	//nullpter也代表空指针
+	//char *p = NULL;//NULL实际是0
+	//char *q = nullptr;
+	//int *a = nullptr;
+	////int a = nullptr;//不可以
+	//int b = NULL;//可以
+
+	/*if (p == nullptr)
+	{
+		cout << "good" << endl;
+	}
+	if (q == NULL)
+	{
+		cout << "q == NULL" << endl;
+	}
+*/
+	//使用nullptr能够避免整数和指针之间发生混淆
+	cout << typeid(NULL).name() << endl;
+	cout << typeid(nullptr).name() << endl;
+
+	//NULL和nullptr实际上是不同的类型
+	//conclusion 对于指针的初始化，用到和指针有关的场合，能用nullptr则用nullptr
 	return 0;
 }
 

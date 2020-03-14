@@ -13,7 +13,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project4", "Project4\Projec
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project5", "Project5\Project5.vcxproj", "{4B1DC1B9-B095-4744-808F-D80A7CF27E2C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cpp规范", "cpp规范", "{9680F0A2-AFC3-4D7B-99E6-227A2DDDA768}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cpplearn", "cpplearn", "{9680F0A2-AFC3-4D7B-99E6-227A2DDDA768}"
 	ProjectSection(SolutionItems) = preProject
 		cpp_form.cpp = cpp_form.cpp
 	EndProjectSection

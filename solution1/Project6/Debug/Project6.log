@@ -1,5 +1,1 @@
-﻿  源.cpp
-c:\users\ren40\desktop\code\cpplearn\cpp_learning\solution1\project6\源.cpp(14): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\ren40\desktop\code\cpplearn\cpp_learning\solution1\project6\源.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\ren40\desktop\code\cpplearn\cpp_learning\solution1\project6\源.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
-  Project6.vcxproj -> C:\Users\ren40\Desktop\code\cpplearn\cpp_learning\solution1\Debug\Project6.exe
+﻿  Project6.vcxproj -> C:\Users\ren40\Desktop\code\cpp_learning\solution1\Debug\Project6.exe

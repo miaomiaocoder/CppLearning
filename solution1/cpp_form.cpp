@@ -44,3 +44,4 @@ for (auto vecitem : vecvalue)
 }
 
 
+//尽量用迭代器访问容器中的元素

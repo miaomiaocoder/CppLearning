@@ -33,3 +33,14 @@ auto func123(int a, int b) -> void {}
 //形参中const 和 &配合很好
 
 
+
+//conclusion:在for语句中，尤其是遍历一个容器的类似操作中，千万不要修改vector容量，增加和删除都不可以
+//不要写出下面这种代码
+vector<int> vecvalue{ 1,2,4,5,6 };
+for (auto vecitem : vecvalue)
+{
+	vecvalue.push_back(123);//导致输出乱套
+	cout << vecitem << endl;
+}
+
+

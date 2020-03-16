@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cpplearn", "cpplearn", "{96
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project6", "Project6\Project6.vcxproj", "{92C33B17-45DD-45C5-A8DC-5F92D856E3B8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project7", "Project7\Project7.vcxproj", "{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -76,6 +78,14 @@ Global
 		{92C33B17-45DD-45C5-A8DC-5F92D856E3B8}.Release|x64.Build.0 = Release|x64
 		{92C33B17-45DD-45C5-A8DC-5F92D856E3B8}.Release|x86.ActiveCfg = Release|Win32
 		{92C33B17-45DD-45C5-A8DC-5F92D856E3B8}.Release|x86.Build.0 = Release|Win32
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Debug|x64.ActiveCfg = Debug|x64
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Debug|x64.Build.0 = Debug|x64
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Debug|x86.Build.0 = Debug|Win32
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Release|x64.ActiveCfg = Release|x64
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Release|x64.Build.0 = Release|x64
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Release|x86.ActiveCfg = Release|Win32
+		{C67D9693-E37F-4A1B-A65D-7AB59FF65BDA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+﻿  source.cpp
+c:\users\ren40\desktop\code\cpp_learning\solution1\project7\source.cpp(6): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  Project7.vcxproj -> C:\Users\ren40\Desktop\code\cpp_learning\solution1\Debug\Project7.exe

@@ -124,6 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp" />
+    <ClCompile Include="TimeClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TimeClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -41,6 +41,10 @@
 
 ## project8
 <li>类和对象学习</li>
+<li>对象拷贝</li>
+<li>构造函数</li>
+<li>函数默认值</li>
+<li>隐式转换和explicit</li>
 
 
 ## project9

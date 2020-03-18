@@ -40,7 +40,12 @@
 
 
 ## project8
+<li>类和对象学习</li>
 
+
+## project9
+<li>c++11新特性汇总</li>
+<li>auto类型推导</li>
 
 
 

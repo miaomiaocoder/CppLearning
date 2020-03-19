@@ -13,6 +13,10 @@ void func(int a, int b = 12)
 	return;
 }
 
+void func1(TimeClass myt)
+{
+
+}
 int main()
 {
 	//func(6);
@@ -113,7 +117,33 @@ int main()
 
 	//隐式转换和explicit
 	//
-	TimeClass myTime40 = 14;//编译器有个行为，把14转换成了TimeClass类类型对象
-	TimeClass myTime41 = (12, 13, 14, 15, 16);
+	//TimeClass myTime40 = 14;//编译器有个行为，把14转换成了TimeClass类类型对象 //调用了单参数的构造函数
+	//TimeClass myTime41 = (12, 13, 14, 15, 16);//调用了单参数的构造函数
+
+	//func1(16);//16被转换成了一个临时的Time对象，导致func1的调用能够成功
+	//调用了单参数的构造函数
+
+	//TimeClass myTime100 = { 16 };
+	//认为此写法正常，带一个参数16，可以让系统明确的知道调用哪个构造函数
+
+	//TimeClass myTime101 = 16;
+	//含糊不清的写法，就存在临时对象隐式转换
+
+	//func1(16);//也是糊不清的写法，就存在临时对象隐式转换
+
+	//如果构造函数声明中带有explicit,则这个构造函数只能用于初始化和显示类型转换
+
+	/*TimeClass myTime = TimeClass(12, 12, 52);
+	TimeClass myTime2(12,13,52);
+	TimeClass myTime3 = TimeClass(12, 13, 52);
+	TimeClass myTime4{ 12,13,53 };*/
+	//TimeClass myTime5 = {12,13,52}; //隐式类型转换//error
+	//复制列表初始化不能标注为“显示”的构造函数
+
+	TimeClass myTime100 = { 16 };
+	TimeClass myTime101 = 16;
+	func1(16);
+
+
 	return 0;
 }

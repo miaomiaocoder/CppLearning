@@ -15,7 +15,7 @@ public:
 	void initTime(int tmphour, int tmpminute, int tmpsecond);
 public:
 	//¹¹Ôìº¯Êý
-	TimeClass(int tmphour, int tmpminute, int tmpsecond = 12);
+	explicit TimeClass(int tmphour, int tmpminute, int tmpsecond = 12);
 
 	TimeClass(int tmphour);
 

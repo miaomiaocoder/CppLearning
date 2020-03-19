@@ -12,14 +12,29 @@ public:
 	int Hour;
 	int Minute;
 	int Second;
+
+	mutable int testvalue;
+
+
 	void initTime(int tmphour, int tmpminute, int tmpsecond);
 public:
 	//构造函数
 	explicit TimeClass(int tmphour, int tmpminute, int tmpsecond = 12);
 
-	TimeClass(int tmphour);
+	explicit TimeClass(int tmphour);
 
 	TimeClass();
+public:
+	void addhour(int tmphour) const;
+	void noone() {};
+	void noone2() const {
+		testvalue = 12;
+	};
+public:
+	//把对象自己返回去
+	TimeClass& add_hour(int tmphour);
+	TimeClass& add_minute(int tmpminute);
+	
 };
 
 

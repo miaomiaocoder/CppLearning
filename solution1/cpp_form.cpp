@@ -45,3 +45,6 @@ for (auto vecitem : vecvalue)
 
 
 //尽量用迭代器访问容器中的元素
+
+
+//对于单参数的构造函数，一般声明为explicit，除非有特别原因

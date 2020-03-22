@@ -1,7 +1,7 @@
 
 #ifndef _MYTIME_
 #define _MYTIME_
-
+#include<iostream>
 
 class Tmpclass
 {
@@ -28,7 +28,7 @@ public:
 	//int Second;
 	//int Second = 0;
 	int Second = { 0 };
-	const int ctestvalue;
+	const int ctestvalue =80;
 
 	mutable int testvalue;
 
@@ -36,11 +36,12 @@ public:
 	void initTime(int tmphour, int tmpminute, int tmpsecond);
 public:
 	//构造函数
-	explicit TimeClass(int tmphour, int tmpminute, int tmpsecond = 12);
+	TimeClass(int tmphour, int tmpminute, int tmpsecond = 12);
+
 
 	explicit TimeClass(int tmphour);
 
-	explicit TimeClass();
+	TimeClass();
 
 	//拷贝构造函数
 	TimeClass(const TimeClass&tmptime, int a = 50);
@@ -49,11 +50,15 @@ public:
 
 
 public:
+
+
 	void addhour(int tmphour) const;
 	void noone() {};
 	void noone2() const {
 		testvalue = 12;
 	};
+
+
 public:
 	//把对象自己返回去
 	TimeClass& add_hour(int tmphour);

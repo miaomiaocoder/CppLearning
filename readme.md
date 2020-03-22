@@ -55,9 +55,17 @@
 ## project9
 <li>c++11新特性汇总</li>
 <li>auto类型推导</li>
+<li>C++ decltype类型</li>
 
+## projetct10
+<li>重载运算符</li>
+<li>拷贝赋值运算符</li>
+<li>析构函数</li>
 
-
+## project11
+<li>派生类</li>
+<li>public protected private</li>
+<li>函数遮蔽</li>
 
 
 

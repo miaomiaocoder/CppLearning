@@ -1,1 +1,5 @@
-﻿  Project8.vcxproj -> C:\Users\ren40\Desktop\code\cpp_learning\solution1\Debug\Project8.exe
+﻿  overloaded_operator.cpp
+c:\users\ren40\desktop\code\cpp_learning\solution1\project8\overloaded_operator.cpp(33): error C2280: “TimeClass &TimeClass::operator =(const TimeClass &)”: 尝试引用已删除的函数
+  c:\users\ren40\desktop\code\cpp_learning\solution1\project8\timeclass.h(70): note: 编译器已在此处生成“TimeClass::operator =”
+  c:\users\ren40\desktop\code\cpp_learning\solution1\project8\timeclass.h(70): note: “TimeClass &TimeClass::operator =(const TimeClass &)”: 因为“TimeClass”有一个常量限定的非类类型的数据成员“TimeClass::ctestvalue”，所以已隐式删除函数
+  c:\users\ren40\desktop\code\cpp_learning\solution1\project8\timeclass.h(31): note: 参见“TimeClass::ctestvalue”的声明

@@ -29,14 +29,14 @@ TimeClass::TimeClass(int tmphour, int tmpminute, int tmpsecond)
 	std::cout << "调用TimeClass::TimeClass(int tmphour, int tmpminute, int tmpsecond)构造函数" << std::endl;
 }
 
-TimeClass::TimeClass():ctestvalue(80)
-{
-	Hour = 12;
-	Minute = 59;
-	Second = 58;
-	initMillSecond(0);
-	std::cout << "调用TimeClass::TimeClass()构造函数" << std::endl;
-}
+//TimeClass::TimeClass():ctestvalue(80)
+//{
+//	Hour = 12;
+//	Minute = 59;
+//	Second = 58;
+//	initMillSecond(0);
+//	std::cout << "调用TimeClass::TimeClass()构造函数" << std::endl;
+//}
 
 TimeClass::TimeClass(int tmphour):ctestvalue(80)
 {

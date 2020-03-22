@@ -50,6 +50,7 @@
 <li>类内初始化</li>
 <li>默认构造函数</li>
 <li>=default, =delete使用</li>
+<li>拷贝构造函数</li>
 
 ## project9
 <li>c++11新特性汇总</li>

@@ -2,6 +2,20 @@
 #ifndef _MYTIME_
 #define _MYTIME_
 
+
+class Tmpclass
+{
+public:
+	Tmpclass()
+	{
+		std::cout << "调用Tmpclass的构造函数" << std::endl;
+	}
+	Tmpclass(Tmpclass &tmpclass)
+	{
+		std::cout << "调用了Tmpclass类的拷贝构造函数 "<< std::endl;
+	}
+};
+
 class TimeClass
 {
 private:
@@ -29,7 +43,11 @@ public:
 	explicit TimeClass();
 
 	//拷贝构造函数
-	TimeClass(TimeClass&tmptime, int a = 50);
+	TimeClass(const TimeClass&tmptime, int a = 50);
+
+	//Tmpclass cl;
+
+
 public:
 	void addhour(int tmphour) const;
 	void noone() {};

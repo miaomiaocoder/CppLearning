@@ -78,3 +78,9 @@ void WriteTimeClass(TimeClass &mytime)
 {
 	std::cout << mytime.Hour << std::endl;
 }
+
+
+TimeClass::TimeClass(const TimeClass&tmptime, int a):ctestvalue(80),Hour(50),Minute(40)
+{
+	std::cout << "调用TimeClass::TimeClass(TimeClass&tmptime, int a)拷贝构造函数" << std::endl;
+}

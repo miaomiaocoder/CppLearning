@@ -26,7 +26,10 @@ public:
 
 	explicit TimeClass(int tmphour);
 
-	TimeClass();
+	explicit TimeClass();
+
+	//¿½±´¹¹Ôìº¯Êý
+	TimeClass(TimeClass&tmptime, int a = 50);
 public:
 	void addhour(int tmphour) const;
 	void noone() {};

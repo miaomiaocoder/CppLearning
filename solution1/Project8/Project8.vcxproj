@@ -126,6 +126,7 @@
     <ClCompile Include="source.cpp" />
     <ClCompile Include="source2.cpp" />
     <ClCompile Include="source3.cpp" />
+    <ClCompile Include="source4.cpp" />
     <ClCompile Include="Time2.cpp" />
     <ClCompile Include="TimeClass.cpp" />
   </ItemGroup>

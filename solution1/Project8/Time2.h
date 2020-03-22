@@ -20,7 +20,7 @@ public:
 
 	//int pfunc() = default; //非特殊函数，不可使用 = default
 
-	Time2() = delete;//让程序元显示的禁用某个函数
+	//Time2() = delete;//让程序元显示的禁用某个函数
 public:
 	int Hour;
 	int Minute;

@@ -24,9 +24,18 @@
     <ClCompile Include="source2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="source3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Time2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TimeClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Time2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

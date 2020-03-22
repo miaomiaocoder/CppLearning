@@ -11,7 +11,10 @@ private:
 public:
 	int Hour;
 	int Minute;
-	int Second;
+	//int Second;
+	//int Second = 0;
+	int Second = { 0 };
+	const int ctestvalue;
 
 	mutable int testvalue;
 
@@ -40,7 +43,6 @@ public:
 	
 };
 
+void WriteTimeClass(TimeClass &mytime);
 
-#endif // !_MYTIME_
-
-
+#endif

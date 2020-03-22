@@ -34,6 +34,9 @@ public:
 	//把对象自己返回去
 	TimeClass& add_hour(int tmphour);
 	TimeClass& add_minute(int tmpminute);
+
+	static int mystatic;//声明，不能在这里初始化
+	static void mstafunc(int testvalue);
 	
 };
 

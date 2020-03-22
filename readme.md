@@ -46,6 +46,7 @@
 <li>函数默认值</li>
 <li>隐式转换和explicit</li>
 <li>类中inline,const,mutable,this知识</li>
+<li>static成员变量，成员函数</li>
 
 
 ## project9

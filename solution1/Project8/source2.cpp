@@ -11,6 +11,18 @@ using namespace std;
 // 非成员函数上不允许修饰符	
 //error
 
+//静态成员变量定义（分配内存）
+int TimeClass::mystatic = 15;
+//可以不给初值，系统默认给0，定义时不需要使用static
+
+void funcm()
+{
+	static int abc = 5;
+	//局部静态变量
+}
+//1)程序有多个模块时，将将全局变量或函数的作用范围限制在当前模块，对其他模块隐藏。
+//2）将局部变量存储到全局数据区，使它不会随着函数调用结束而被销毁。
+
 int main()
 {
 	//类定义中实现成员函数inline
@@ -23,13 +35,13 @@ int main()
 	//也就是说，这个成员函数不会修改类Time的任何状态
 	//后边加一个const后缀的成员函数“常量成员函数”
 
-	const TimeClass abc;//定义const对象。这种对象有限制
+	//const TimeClass abc;//定义const对象。这种对象有限制
 	//abc.initTime(15,34,60);//error
 	//这个initTime只能被非const对象调用
-	TimeClass der;
-	der.initTime(123,32,32);
+	//TimeClass der;
+	//der.initTime(123,32,32);
 	//abc.noone();//errpe，不可以调用，因为noone()没有声明成const
-	abc.noone2();
+	//abc.noone2();
 
 	//const成员函数，不管是const对象还是非const，都可以调用const成员函数
 	//而非const成员函数，不能被const对象调用，只能被非const对象调用
@@ -56,8 +68,42 @@ int main()
 
 
 	//TimeClass(15);
-	TimeClass mytime;
-	mytime.add_hour(3).add_minute(12);
+	/*TimeClass mytime;
+	mytime.add_hour(3).add_minute(12);*/
+
+	//static成员
+	//属于整个类的成员对象，叫做static成员变量（静态成员变量）
+	//特点：不属于某个对象，属于整个类。
+	//这种成员变量只有一个副本，对于这种成员变量的引用，我们使用类名::成员变量名
 	
+	//成员函数前面也可以加static构成静态成员函数
+	//属于整个类的成员函数，调用时:类名::成员函数名（...）
+	//如何定义静态成员变量（分配内存）：我们一般会在某一个.cpp源文件的开头定义这个静态成员变量
+
+	/*TimeClass mytime1;
+	mytime1.Minute = 15;
+
+	TimeClass mytime2;
+	mytime2.Minute = 30;
+
+	cout << mytime1.Minute << endl;
+	cout << mytime2.Minute << endl;*/
+
+	cout << TimeClass::mystatic << endl;
+
+	TimeClass mytime1;
+	mytime1.mystatic = 40;
+	TimeClass mytime2;
+
+	cout << TimeClass::mystatic << endl;
+	cout << mytime1.mystatic << endl;
+	cout << mytime2.mystatic << endl;
+
+	TimeClass::mstafunc(12);
+	mytime1.mstafunc(15);
+	mytime2.mstafunc(78);
+
+	cout << TimeClass::mystatic << endl;
+	cout << mytime2.mystatic << endl;
 	return 0;
 }

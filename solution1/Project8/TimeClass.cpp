@@ -64,3 +64,9 @@ TimeClass& TimeClass:: add_minute(int Minute)
 	this->Minute += Minute;
 	return*this;
 }
+
+void TimeClass::mstafunc(int testvalue)
+{
+	//Minute = 12; //error
+	mystatic = testvalue;//ok
+}

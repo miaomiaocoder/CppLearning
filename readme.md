@@ -47,7 +47,9 @@
 <li>隐式转换和explicit</li>
 <li>类中inline,const,mutable,this知识</li>
 <li>static成员变量，成员函数</li>
-
+<li>类内初始化</li>
+<li>默认构造函数</li>
+<li>=default, =delete使用</li>
 
 ## project9
 <li>c++11新特性汇总</li>

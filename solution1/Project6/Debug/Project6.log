@@ -1,1 +1,7 @@
-﻿  Project6.vcxproj -> C:\Users\ren40\Desktop\code\cpp_learning\solution1\Debug\Project6.exe
+﻿  vector初始化.cpp
+  源.cpp
+c:\users\ren40\desktop\code\cpp_learning\solution1\project6\源.cpp(14): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\ren40\desktop\code\cpp_learning\solution1\project6\源.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\ren40\desktop\code\cpp_learning\solution1\project6\源.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码...
+  Project6.vcxproj -> C:\Users\ren40\Desktop\code\cpp_learning\solution1\Debug\Project6.exe

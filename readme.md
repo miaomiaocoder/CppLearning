@@ -66,7 +66,9 @@
 <li>派生类</li>
 <li>public protected private</li>
 <li>函数遮蔽</li>
+<li>基类指针，派生类指针</li>
 
+## project12
 
 
 

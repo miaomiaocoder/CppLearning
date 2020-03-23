@@ -6,5 +6,11 @@ class Men:public Human //表示Men是Human的子类
 {
 public:
 	Men();
+
+public:
+	void samenamefunc(int);
+
+public:
+	using Human::samenamefunc;
 };
 

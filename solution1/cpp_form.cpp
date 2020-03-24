@@ -48,3 +48,6 @@ for (auto vecitem : vecvalue)
 
 
 //对于单参数的构造函数，一般声明为explicit，除非有特别原因
+
+
+//基类的析构函数一般要写成虚函数

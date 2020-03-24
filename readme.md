@@ -67,6 +67,8 @@
 <li>public protected private</li>
 <li>函数遮蔽</li>
 <li>基类指针，派生类指针</li>
+<li>虚函数，纯虚函数，虚析构函数</li>
+<li>override, final</li>
 
 ## project12
 

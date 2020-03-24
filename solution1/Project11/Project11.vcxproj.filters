@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project11.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Human.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Men.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Women.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,6 +33,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Men.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Women.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

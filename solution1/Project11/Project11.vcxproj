@@ -153,11 +153,13 @@
   <ItemGroup>
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="Men.cpp" />
-    <ClCompile Include="Project11.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Women.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Human.h" />
     <ClInclude Include="Men.h" />
+    <ClInclude Include="Women.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

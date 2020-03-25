@@ -27,6 +27,15 @@
     <ClCompile Include="Source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="A.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Human.h">
@@ -36,6 +45,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Women.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="A.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="C.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

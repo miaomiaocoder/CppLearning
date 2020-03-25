@@ -66,9 +66,11 @@
 <li>派生类</li>
 <li>public protected private</li>
 <li>函数遮蔽</li>
+<li>c++11类中using</li>
 <li>基类指针，派生类指针</li>
 <li>虚函数，纯虚函数，虚析构函数</li>
 <li>override, final</li>
+<li>友元函数，友元类，友元成员函数</li>
 
 ## project12
 

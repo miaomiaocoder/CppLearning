@@ -22,5 +22,12 @@ public:
 
 public:
 	using Human::samenamefunc;
+private:
+	void funcmen() const{
+		std::cout << "test" << std::endl;
+	}
+
+	//因为友元函数不属于类成员，索一友元函数声明不受public,private,protected限制
+	friend void func(const Men &tempmen);//该函数是友元函数
 };
 

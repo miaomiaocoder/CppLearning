@@ -25,3 +25,5 @@ Men::~Men()
 {
 	std::cout << "Ö´ĞĞÁËMen::~Men()" << std::endl;
 }
+
+

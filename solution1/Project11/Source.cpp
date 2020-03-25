@@ -5,6 +5,31 @@
 #include"Human.h"
 #include"Men.h"
 #include"Women.h"
+#include"func.h"
+#include"A.h"
+#include"C.h"
+
+//class C;//类C声明
+//class A
+//{
+//private:
+//	int data;
+//	friend class C;
+//};
+//
+//class C
+//{
+//public:
+//	void callCAF(int x, A &a)
+//	{
+//		a.data = x;
+//		std::cout << a.data << std::endl;
+//	}
+//	void callCAF2(A &a)
+//	{
+//		a.data;
+//	}
+//};
 
 int main()
 {
@@ -126,8 +151,8 @@ int main()
 	//delete pmen;
 
      
-	Human *phuman = new Men;
-	delete phuman;//没有执行子类的析构函数
+	//Human *phuman = new Men;
+	//delete phuman;//没有执行子类的析构函数
 	//结论：用基类指针new子类的对象，在delete的时候系统不会调用派生类的析构函数
 	//解决方式
 	//把父类的析构函数写成虚函数
@@ -139,6 +164,43 @@ int main()
 	//Human这个类中的析构函数就要声明为virtual，也就是说c++为了获得运行时的多态行为，所调用的成员函数必须是virtual
 	
 	//虚函数会增加内存开销，类里面定义虚函数，编译器就会给这个类增加虚函数表，在这个表里放虚函数指针
+	
+
+	//友元函数
+	//只要让函数func成为类Men的成员函数，那么func这个函数就能访问类Men的所有成员（成员变量，成员函数），private,protected,public
+	
+	
+
+	//Men men;
+	//func(men);//打印“test”
+
+	//友元函数是给函数，通过声明为某个类Men的友元函数，它就能访问这个类（Men）的所有成员，包括private,protected,public
+	
+	
+	//友元类： 类 可以把其它的类定义为友元类。如果你是我的友元类，那么你就可以在你的成员函数中访问我所有的成员
+	//修改类A，让类C成为类A的朋友（让类C成为类A的友元类）
+	/*A a;
+	C c;
+	c.callCAF(3,a);*/
+
+	//注意：每个类负责控制自己的友元类和友元函数，所以：
+	//a)友元关系不能被继承；
+	//b)友元关系是单向的，比如上面类C是类A的友元类，但是类A不是类C的友元类
+	//c)友元关系没有传递性，比如类B是类A的友元类，类C是类B的友元类，这并不代表类C是类A的友元类
+
+
+	//友元成员函数
+	//必须注意代码组织结构，因为有声明和定义依赖关系
+
+	A a;
+	C c;
+	c.callCAF(3, a);
+
+	//总结：friend:
+	//优点：允许在特定情况下某些非成员函数访问类的protected,private成员，从而提出友元成员函数这么一个概念
+	//使访问protected，private成员更灵活
+
+	//缺点：破坏了类的封装性，降低了类的可靠性和可维护性
 	return 0;
 }
 

@@ -156,6 +156,7 @@
     <ClCompile Include="func.cpp" />
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="Men.cpp" />
+    <ClCompile Include="RTTI.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Women.cpp" />
   </ItemGroup>

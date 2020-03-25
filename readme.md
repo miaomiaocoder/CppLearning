@@ -71,6 +71,8 @@
 <li>虚函数，纯虚函数，虚析构函数</li>
 <li>override, final</li>
 <li>友元函数，友元类，友元成员函数</li>
+<li>RTTI</li>
+<li>dynamic_cast, typeid, type_info类</li>
 
 ## project12
 

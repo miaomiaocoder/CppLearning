@@ -158,6 +158,7 @@
     <ClCompile Include="Men.cpp" />
     <ClCompile Include="RTTI.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Source2.cpp" />
     <ClCompile Include="Women.cpp" />
   </ItemGroup>
   <ItemGroup>

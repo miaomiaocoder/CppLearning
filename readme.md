@@ -1,15 +1,16 @@
 # cpp_learning  
 学习c++各个部分的敲的代码     
 涉及c++基本语言，基本的类，模板与泛型，智能指针，并发与多线程，c++内存，STL等知识  
-本人学习c++时主要参考教程(也极力推荐)：
-<li><a = "http://c.biancheng.net/cplus/">c++入门教程</a></li>
-<li><a = "http://c.biancheng.net/stl/">STL教程：C++ STL快速入门</a></li>
-<li><a = "http://c.biancheng.net/cplus/11/">C++11教程：C++11新特性大汇总</a></li>
-<li><a = "https://study.163.com/course/courseMain.htm?courseId=1005735020&share=1&shareId=1030120374">c++从入门到精通 c++11/14/17</a></li>  
-<li><a = "https://coding.imooc.com/learn/list/414.html">2020 重学C++
-重构你的C++知识体系</a></li>
-<li><a = "https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5">cppreference.com </a></li>
-<li><a = "http://c.biancheng.net/cpp/u/cjinjie/list_48_4.html">C语言深度剖析【进阶篇】</a></li>
+## 本人学习c++时主要参考教程(也极力推荐)：  
+### [c++入门教程](http://c.biancheng.net/cplus/)
+### [STL教程：C++ STL快速入门](http://c.biancheng.net/stl/)
+### [C++11教程：C++11新特性大汇总](http://c.biancheng.net/cplus/11/)
+### [2020 重学C++重构你的C++知识体系](https://coding.imooc.com/learn/list/414.html)
+### [c++从入门到精通 c++11/14/17](https://study.163.com/course/courseMain.htm?courseId=1005735020&share=1&shareId=1030120374)
+### [cppreference.com](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+### [C语言深度剖析【进阶篇】](http://c.biancheng.net/cpp/u/cjinjie/list_48_4.html)
+
+## 目录
 
 ##  solution1/project1  
 <li>c++头文件(ps:如何实现头文件防卫) </li>

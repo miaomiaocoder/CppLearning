@@ -13,84 +13,84 @@
 ## 目录
 
 ##  solution1/project1  
-<li>c++头文件(ps:如何实现头文件防卫) </li>
-<li>auto, 内存分配</li>
-<li> cin/cout学习</li>
-<li>cpp多文件编程简单入门 </li>   
+* c++头文件(ps:如何实现头文件防卫) 
+* auto, 内存分配
+* cin/cout学习
+* cpp多文件编程简单入门 
 
 ##  solution1/project2  
-<li>string初始化</li>
-<li> string构造函数和析构函数学习</li>
-<li> 获取string长度</li>
-<li>获取字符串元素</li>
+* string初始化
+* string构造函数和析构函数学习
+* 获取string长度
+* 获取字符串元素
 
 ##  solution1/project3  
-<li>  string学习 </li>
-<li>  compare the string </li>
-<li>  modify and replace the string</li>
+*  string学习 
+*  compare the string 
+*  modify and replace the string
 
 ##  solution1/project4  
-<li>  c++迭代器学习</li>
-<li>迭代器实例</li>    
+* c++迭代器学习
+* 迭代器实例
 
 ##  solution1/project5     
-<li>c++类和结构学习</li> 
-<li>内联函数学习</li>
-<li>特殊函数用法</li>
-<li>const char*, char const*,char*const对比</li>    
+* c++类和结构学习 
+* 内联函数学习
+* 特殊函数用法
+* const char*, char const*, char*const对比 
 
 ##  solution1/project6  
-<li>vector初步学习</li>
-<li>定义和初始化vector对象</li>
-<li>一些vector的初步操作</li>
+* vector初步学习
+* 定义和初始化vector对象
+* 一些vector的初步操作
 
 ##  solution1/project7
-<li>隐式类型转换</li>
-<li>显示类型转换</li>
+* 隐式类型转换
+* 显示类型转换
 
 
 ## solution1/project8
-<li>类和对象学习</li>
-<li>对象拷贝</li>
-<li>构造函数</li>
-<li>函数默认值</li>
-<li>隐式转换和explicit</li>
-<li>类中inline,const,mutable,this知识</li>
-<li>static成员变量，成员函数</li>
-<li>类内初始化</li>
-<li>默认构造函数</li>
-<li>=default, =delete使用</li>
-<li>拷贝构造函数</li>
+* 类和对象学习
+* 对象拷贝
+* 构造函数
+* 函数默认值
+* 隐式转换和explicit
+* 类中inline,const,mutable,this知识
+* static成员变量，成员函数
+* 类内初始化
+* 默认构造函数
+* =default, =delete使用
+* 拷贝构造函数
 
 ## solution1/project9
-<li>c++11新特性汇总</li>
-<li>auto类型推导</li>
-<li>C++ decltype类型</li>
+* c++11新特性汇总
+* auto类型推导
+* c++ decltype类型
 
 ## solution1/projetct10
-<li>重载运算符</li>
-<li>拷贝赋值运算符</li>
-<li>析构函数</li>
+* 重载运算符
+* 拷贝赋值运算符
+* 析构函数
 
 ## solution1/project11
-<li>派生类</li>
-<li>public protected private</li>
-<li>函数遮蔽</li>
-<li>c++11类中using</li>
-<li>基类指针，派生类指针</li>
-<li>虚函数，纯虚函数，虚析构函数</li>
-<li>override, final</li>
-<li>友元函数，友元类，友元成员函数</li>
-<li>RTTI</li>
-<li>dynamic_cast, typeid, type_info类</li>
-<li>派生类对象模型</li>
+* 派生类
+* public protected private
+* 函数遮蔽
+* c++11类中using
+* 基类指针，派生类指针
+* 虚函数，纯虚函数，虚析构函数
+* override, final
+* 友元函数，友元类，友元成员函数
+* RTTI
+* dynamic_cast, typeid, type_info类
+* 派生类对象模型
 
 ##  solution1/project12
 
 
 ##  noteofcpp
-<li>函数调用栈帧布局实验</li>
-<li>流程控制语句反汇编实验</li>
+* 函数调用栈帧布局实验
+* 流程控制语句反汇编实验
 
 
 

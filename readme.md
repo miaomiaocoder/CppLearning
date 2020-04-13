@@ -9,6 +9,7 @@
 ### [c++从入门到精通 c++11/14/17](https://study.163.com/course/courseMain.htm?courseId=1005735020&share=1&shareId=1030120374)
 ### [cppreference.com](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
 ### [C语言深度剖析【进阶篇】](http://c.biancheng.net/cpp/u/cjinjie/list_48_4.html)
+### [现代c++30讲](https://time.geekbang.org/column/intro/256)
 
 ## 目录
 
@@ -63,7 +64,7 @@
 * 拷贝构造函数
 
 ## solution1/project9
-* c++11新特性汇总
+* c++11某些新特性
 * auto类型推导
 * c++ decltype类型
 
@@ -86,7 +87,7 @@
 * 派生类对象模型
 
 ##  solution1/project12
-
+* 智能指针
 
 ##  noteofcpp
 * 函数调用栈帧布局实验

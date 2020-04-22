@@ -1,0 +1,1 @@
+g++ -o "/home/renzhenhua/projects/EXP1version1/bin/x64/Debug/EXP1version1.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/renzhenhua/projects/EXP1version1/obj/x64/Debug/ClassA.o /home/renzhenhua/projects/EXP1version1/obj/x64/Debug/main.o

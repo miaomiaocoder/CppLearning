@@ -1,0 +1,1 @@
+g++ -o "/home/renzhenhua/projects/EXP1version2/bin/x64/Debug/EXP1version2.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/renzhenhua/projects/EXP1version2/obj/x64/Debug/ClassA.o /home/renzhenhua/projects/EXP1version2/obj/x64/Debug/main.o /home/renzhenhua/projects/EXP1version2/obj/x64/Debug/SerializerForClassA.o

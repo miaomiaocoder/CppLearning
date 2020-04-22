@@ -1,0 +1,9 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.56.1'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  ClassA.cpp
+  main.cpp
+  Linking objects
+  EXP1version1.vcxproj -> C:\Users\ren40\Desktop\code\unix\EXP1version1\EXP1version1\bin\x64\Debug\EXP1version1.out

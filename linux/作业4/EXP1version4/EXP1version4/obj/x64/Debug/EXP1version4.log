@@ -1,0 +1,17 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.56.1'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  Serializer.cpp
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(9,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(9,20): warning :   for (int i = 0; i < v.size(); i++)
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(9,20): warning :                   ~~^~~~~~~~~~
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(34,16): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(34,16): warning :    int rd = read(fd, &nType,4);
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(34,16): warning :             ~~~~^~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(38,22): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(38,22): warning :    for (auto i = 0; i < nSerClass.size(); ++i) {
+C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\Serializer.cpp(38,22): warning :                     ~~^~~~~~~~~~~~~~~~~~
+  Linking objects
+  EXP1version4.vcxproj -> C:\Users\ren40\Desktop\code\unix\EXP1version4\EXP1version4\bin\x64\Debug\EXP1version4.out

@@ -9,6 +9,10 @@ typedef struct{
 ```
 ### 习题
 ### 两个增序的顺序表合并，使新的顺序表也是增序
+_思路：_
+* 迭代
+* 按顺序不断取下两个顺序表表头较小的节点存入新的顺序表中
+* 讲剩余的表直接接上
 ```
 bool Merge(SList A, SList B, SList &C)
 {
@@ -102,3 +106,203 @@ node*Creat(int Count)
     return(head);
 }
 ```
+### 习题
+### [两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
+
+如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
+
+您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
+
+示例：
+```
+输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
+输出：7 -> 0 -> 8
+原因：342 + 465 = 807
+```
+_思路：_
+* 设置一个carry 考虑进位
+* 相加时NULL 处理为按照0相加
+* 注意考虑最后一位carry
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* p = l1;
+        ListNode* q = l2;
+        ListNode* l3 = new ListNode(0);
+        ListNode* r = l3;
+        int carry = 0;
+        int sum = 0;
+        while((p != NULL) || (q != NULL))
+        {
+            int x = 0;
+            int y = 0;
+            if(p != NULL){
+                x = p->val;
+            }
+            if(q != NULL){
+                y = q->val;
+            }
+            sum = x + y + carry;
+            carry = sum/10;
+            r->next = new ListNode(sum%10);
+            r = r->next;
+            if(p != NULL)
+                p=p->next;
+            if(q != NULL)
+                q=q->next;
+        }
+        if(carry > 0)
+        {
+            r->next = new ListNode(1);
+            r = r->next;
+        }
+        r->next = NULL;
+        return l3->next;
+    }
+};
+```
+### [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+
+示例：
+```
+输入：1->2->4, 1->3->4
+输出：1->1->2->3->4->4
+```
+_思路：_
+* 迭代
+* 当 l1 和 l2 都不是空链表时，判断 l1 和 l2 哪一个链表的头节点的值更小，将较小值的节点添加到结果里，当一个节点被添加到结果里之后，将对应链表中的节点向后移一位。
+* 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode *p = l1;
+        ListNode *q = l2;
+        ListNode *l3 = new ListNode(0);
+        ListNode *r = l3; 
+        while((p!= NULL) && (q != NULL))
+        {
+            if(p->val >= q->val){
+                r->next = new ListNode(q->val);
+                r = r->next;
+                q=q->next;
+            }else{
+                r->next = new ListNode(p->val);
+                r = r->next;
+                p=p->next;
+            }
+        }
+        r->next = p?p:q;
+        return l3->next; 
+    }
+};
+```
+### [删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
+给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
+
+示例：
+```
+给定一个链表: 1->2->3->4->5, 和 n = 2.
+
+当删除了倒数第二个节点后，链表变为 1->2->3->5.
+```
+说明：
+
+给定的 n 保证是有效的。
+
+进阶：
+
+你能尝试使用一趟扫描实现吗？
+
+_思路_
+* 使用双指针法
+* 第一个指针先走n步（下面我添加了自己的头节点，走n+1步）
+* 完成上面以后，2个指针同时移动，直到first pointer = nullptr
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* newhead = new ListNode(0);
+        newhead->next = head;
+        ListNode* first = newhead;
+        ListNode* second = newhead;
+        for(auto i = 0; i <= n ; i++)
+        {
+            first = first->next;
+        }
+        while(first != nullptr)
+        {
+            first = first->next;
+            second = second->next;
+        }
+        second->next = second->next->next;//跳过要删除的节点
+        return newhead->next;
+    }
+};
+```
+### [两数之和](https://leetcode-cn.com/problems/two-sum/)
+给定一个整数数组 ```nums``` 和一个目标值 ```target```，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+
+示例:
+```
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+```
+
+_思路：_
+* 直接遍历即可
+* O（n^2）
+```
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for(auto i = 0; i < nums.size() - 1; ++i)
+        {
+            for(auto j = i+1; j < nums.size(); ++j)
+            {
+                if((nums[i] + nums[j]) == target)
+                {
+                    return {i,j};
+                }
+            }
+        }
+        return{};
+    }
+};
+```
+
+
+
+
+

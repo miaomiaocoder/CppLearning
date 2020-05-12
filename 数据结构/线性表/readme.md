@@ -1,6 +1,6 @@
 ## 线性表顺序存储
 ### 定义
-```
+```cpp
 #define MAXSIZE 50
 typedef struct{
     ElemType data[MAXSIZE];
@@ -13,7 +13,7 @@ _思路：_
 * 迭代
 * 按顺序不断取下两个顺序表表头较小的节点存入新的顺序表中
 * 讲剩余的表直接接上
-```
+```cpp
 bool Merge(SList A, SList B, SList &C)
 {
     if(A.length+B.length > C.Maxsize)
@@ -37,9 +37,55 @@ bool Merge(SList A, SList B, SList &C)
     return true;
 }
 ```
+### [整数反转](https://leetcode-cn.com/problems/reverse-integer/)
+给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+示例1：
+```
+输入: 123
+输出: 321
+```
+示例2：
+```
+输入: -123
+输出: -321
+```
+示例3:
+```
+输入: 120
+输出: 21
+```
+注意：
+假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
+_思路:_
+* 注意根据范围判定是否溢出
+* 2^31 − 1最后一位为7，2^31最后一位为8
+```cpp
+class Solution {
+public:
+    int reverse(int x) {
+        int min=INT_MIN;
+        int max=INT_MAX;
+        int result = 0;
+        while(x != 0)
+        {
+            int a = x%10;  
+            x = x/10;
+            if(result > max/10 || (result == max/10 && a>7)){
+                return 0;
+            }
+            if(result < min/10 || (result == min/10 && a<-8)){
+                return 0;
+            }
+            result = result * 10 + a;
+        }
+        return result;
+    }
+};
+```
+
 ## 线性表链式存储
 ### 定义
-```
+```cpp
 typedef struct LNode{
     ElemType data;
     struct LNode *next;
@@ -48,7 +94,7 @@ typedef struct LNode{
 
 ### 头插法创建单链表
 注意：使用头插法建立单链表时，读入数据的顺序与生成的链表中的元素顺序相反
-```
+```cpp
 struct node
 {
     int data;
@@ -77,7 +123,7 @@ node*Creat(int Count)
 }
 ```
 ### 尾插法创建单链表
-```
+```cpp
 struct node
 {
     int data;
@@ -124,7 +170,7 @@ _思路：_
 * 设置一个carry 考虑进位
 * 相加时NULL 处理为按照0相加
 * 注意考虑最后一位carry
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -183,7 +229,7 @@ _思路：_
 * 迭代
 * 当 l1 和 l2 都不是空链表时，判断 l1 和 l2 哪一个链表的头节点的值更小，将较小值的节点添加到结果里，当一个节点被添加到结果里之后，将对应链表中的节点向后移一位。
 * 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -237,7 +283,7 @@ _思路_
 * 使用双指针法
 * 第一个指针先走n步（下面我添加了自己的头节点，走n+1步）
 * 完成上面以后，2个指针同时移动，直到first pointer = nullptr
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -283,7 +329,7 @@ public:
 _思路：_
 * 直接遍历即可
 * O（n^2）
-```
+```cpp
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {

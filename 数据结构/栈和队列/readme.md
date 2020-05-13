@@ -62,3 +62,15 @@ typedef struct{
     int front, rear;  //front 队头（队首）指针， rear 队尾指针
 }SqQueue;
 ```
+
+## 队列的链式存储
+### 定义
+```cpp
+typedef struct{      //链式队列结点
+    ElemType data;
+    struct LinkNode *next;
+}LinkNode;
+typedef struct{     //链式队列
+    LinkNode *front, *rear;   //队列的队头和队尾指针
+}LinkQueue;
+```

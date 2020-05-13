@@ -56,6 +56,7 @@ bool Merge(SList A, SList B, SList &C)
 ```
 注意：
 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
+
 _思路:_
 * 注意根据范围判定是否溢出
 * 2^31 − 1最后一位为7，2^31最后一位为8
@@ -348,7 +349,37 @@ public:
 };
 ```
 
+### [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
+反转一个单链表。
 
+示例：
+```
+输入: 1->2->3->4->5->NULL
+输出: 5->4->3->2->1->NULL
+```
+进阶:
+你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
+
+_思路：_
+
+* 定义两个指针： pre 和 cur ；pre 在前 cur 在后
+* 实现局部反转以后移动
+* 参考[huwt的思路](https://leetcode-cn.com/problems/reverse-linked-list/solution/fan-zhuan-lian-biao-shuang-zhi-zhen-di-gui-yao-mo-/)
+```cpp
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* cur = NULL,*pre = head;
+        while(pre!=NULL){
+            ListNode* temp = pre->next; 
+            pre->next = cur;
+            cur = pre;
+            pre = temp;
+        }
+        return cur;
+    }
+};
+```
 
 

@@ -1,21 +1,3 @@
-- [线性表顺序存储](#-------)
-  * [定义](#--)
-  * [习题](#--)
-    + [1.两个增序的顺序表合并，使新的顺序表也是增序](#1---------------------)
-    + [[2.整数反转](https://leetcode-cn.com/problems/reverse-integer/)](#-2------https---leetcode-cncom-problems-reverse-integer--)
-- [线性表链式存储](#-------)
-  * [定义](#---1)
-    + [1.头插法创建单链表](#1--------)
-    + [2.尾插法创建单链表](#2--------)
-  * [习题](#---1)
-    + [[3.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)](#-3------https---leetcode-cncom-problems-add-two-numbers--)
-    + [[4.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)](#-4----------https---leetcode-cncom-problems-merge-two-sorted-lists--)
-    + [[5.删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)](#-5--------n-----https---leetcode-cncom-problems-remove-nth-node-from-end-of-list--)
-    + [[6.两数之和](https://leetcode-cn.com/problems/two-sum/)](#-6------https---leetcode-cncom-problems-two-sum--)
-    + [[7.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)](#-7------https---leetcode-cncom-problems-reverse-linked-list--)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # 线性表顺序存储
 ## 定义
 ```cpp
@@ -399,5 +381,132 @@ public:
     }
 };
 ```
+### [8.相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
+如下面的两个链表：
+```
+A:          a1 → a2
+                    ↘
+                      c1 → c2 → c3
+                    ↗
+B:    b1 → b2 → b3
+```
+在节点 c1 开始相交。
+
+示例 1：
+```
+A:          4 → 1
+                    ↘
+                      8 → 4 → 5
+                    ↗
+B:     5 →  0 → 1
+```
+```
+输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+输出：Reference of the node with value = 8
+输入解释：相交节点的值为 8 （注意，如果两个链表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。
+```
+
+示例 2：
+```
+A:    2 → 6 → 4
+
+B:    1 → 5 
+```
+```
+输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+输出：null
+输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。
+解释：这两个链表不相交，因此返回 null。
+```
+
+注意：
+
+* 如果两个链表没有交点，返回 null.
+* 在返回结果后，两个链表仍须保持原有的结构。
+* 可假定整个链表结构中没有循环。
+* 程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
+
+
+#### _思路：_
+* 双指针
+* A+B 和 B+A长度相同。遍历A+B和B+A一定是同时结束，如果A,B相交的话，两个遍历的指针一定会同时到达交点 如果A,B不相交的话两个指针就会同时到达A+B（B+A）的尾节点
+
+代码：
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode *l1 = headA; 
+        ListNode *l2 = headB;
+        while(l1 != l2){
+            if(l1 != NULL){
+                l1 = l1->next;
+            }else{
+                l1 = headB;
+            }
+            if(l2 != NULL){
+                l2 = l2->next;
+            }else{
+               l2 = headA; 
+            }
+        }
+        return l1;
+    }
+};
+```
+
+### [9. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+
+示例 1:
+```
+输入: 1->1->2
+输出: 1->2
+```
+示例 2:
+```
+输入: 1->1->2->3->3
+输出: 1->2->3
+```
+_思路_:
+* 使用指针遍历即可
+* 注意考虑边界
+
+代码：
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode* l1 = head;
+        while(l1 != NULL && l1->next != NULL){
+            if(l1->val == l1->next->val){
+                l1->next = l1->next->next;
+            }else{
+                l1 = l1->next;
+            }
+        }
+        return head;
+    }
+};
+```
+
+
+
 
 

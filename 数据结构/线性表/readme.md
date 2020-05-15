@@ -1,21 +1,22 @@
+- [线性表顺序存储](#-------)
+  * [定义](#--)
+  * [习题](#--)
+    + [1.两个增序的顺序表合并，使新的顺序表也是增序](#1---------------------)
+    + [[2.整数反转](https://leetcode-cn.com/problems/reverse-integer/)](#-2------https---leetcode-cncom-problems-reverse-integer--)
+- [线性表链式存储](#-------)
+  * [定义](#---1)
+    + [1.头插法创建单链表](#1--------)
+    + [2.尾插法创建单链表](#2--------)
+  * [习题](#---1)
+    + [[3.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)](#-3------https---leetcode-cncom-problems-add-two-numbers--)
+    + [[4.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)](#-4----------https---leetcode-cncom-problems-merge-two-sorted-lists--)
+    + [[5.删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)](#-5--------n-----https---leetcode-cncom-problems-remove-nth-node-from-end-of-list--)
+    + [[6.两数之和](https://leetcode-cn.com/problems/two-sum/)](#-6------https---leetcode-cncom-problems-two-sum--)
+    + [[7.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)](#-7------https---leetcode-cncom-problems-reverse-linked-list--)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # 线性表顺序存储
-<!-- GFM-TOC -->
-* [1. 合并两个增序的顺序表](###1-1.两个增序的顺序表合并，使新的顺序表也是增序)
-* [2. 整数反转](###2-2.整数反转)
-<!-- GFM-TOC -->
-# 线性表链式存储
-<!-- GFM-TOC -->
-* [1.头插法创建单链表](###3-1.头插法创建单链表)
-* [2.尾插法创建单链表](###4-2.尾插法创建单链表)
-* [3.两数相加](###5-3.两数相加)
-* [4.合并两个有序链表](###6-4.合并两个有序链表)
-* [5.删除链表的倒数第N个节点](###7-5.删除链表的倒数第N个节点)
-* [6.两数之和](###8-6.两数之和)
-* [7.反转链表](###9-7.反转链表)
-<!-- GFM-TOC -->
-
-
-## 线性表顺序存储
 ## 定义
 ```cpp
 #define MAXSIZE 50
@@ -101,7 +102,7 @@ public:
 };
 ```
 
-## 线性表链式存储
+# 线性表链式存储
 ## 定义
 ```cpp
 typedef struct LNode{

@@ -1,3 +1,20 @@
+# 线性表顺序存储
+<!-- GFM-TOC -->
+* [1. 合并两个增序的顺序表](###-1.两个增序的顺序表合并，使新的顺序表也是增序)
+* [2. 整数反转](###-2.整数反转)
+<!-- GFM-TOC -->
+# 线性表链式存储
+<!-- GFM-TOC -->
+* [1.头插法创建单链表](###-1.头插法创建单链表)
+* [2.尾插法创建单链表](###-2.尾插法创建单链表)
+* [3.两数相加](###-3.两数相加)
+* [4.合并两个有序链表](###-4.合并两个有序链表)
+* [5.删除链表的倒数第N个节点](###-5.删除链表的倒数第N个节点)
+* [6.两数之和](###-6.两数之和)
+* [7.反转链表](###-7.反转链表)
+<!-- GFM-TOC -->
+
+
 ## 线性表顺序存储
 ### 定义
 ```cpp
@@ -8,7 +25,7 @@ typedef struct{
 }SList;
 ```
 ### 习题
-### 两个增序的顺序表合并，使新的顺序表也是增序
+### 1.两个增序的顺序表合并，使新的顺序表也是增序
 _思路：_
 * 迭代
 * 按顺序不断取下两个顺序表表头较小的节点存入新的顺序表中
@@ -37,7 +54,7 @@ bool Merge(SList A, SList B, SList &C)
     return true;
 }
 ```
-### [整数反转](https://leetcode-cn.com/problems/reverse-integer/)
+### [2.整数反转](https://leetcode-cn.com/problems/reverse-integer/)
 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 示例1：
 ```
@@ -93,7 +110,7 @@ typedef struct LNode{
 }LNode, *LinkList;
 ```
 
-### 头插法创建单链表
+### 1.头插法创建单链表
 注意：使用头插法建立单链表时，读入数据的顺序与生成的链表中的元素顺序相反
 ```cpp
 struct node
@@ -123,7 +140,7 @@ node*Creat(int Count)
     return(head);
 }
 ```
-### 尾插法创建单链表
+### 2.尾插法创建单链表
 ```cpp
 struct node
 {
@@ -154,7 +171,7 @@ node*Creat(int Count)
 }
 ```
 ### 习题
-### [两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+### [3.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
 
 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
@@ -218,7 +235,7 @@ public:
     }
 };
 ```
-### [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+### [4.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 
 示例：
@@ -263,7 +280,7 @@ public:
     }
 };
 ```
-### [删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
+### [5.删除链表的倒数第N个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
 
 示例：
@@ -314,7 +331,7 @@ public:
     }
 };
 ```
-### [两数之和](https://leetcode-cn.com/problems/two-sum/)
+### [6.两数之和](https://leetcode-cn.com/problems/two-sum/)
 给定一个整数数组 ```nums``` 和一个目标值 ```target```，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
@@ -349,7 +366,7 @@ public:
 };
 ```
 
-### [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+### [7.反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 反转一个单链表。
 

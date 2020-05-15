@@ -16,7 +16,7 @@
 
 
 ## 线性表顺序存储
-### 定义
+## 定义
 ```cpp
 #define MAXSIZE 50
 typedef struct{
@@ -24,7 +24,7 @@ typedef struct{
     int length;
 }SList;
 ```
-### 习题
+## 习题
 ### 1.两个增序的顺序表合并，使新的顺序表也是增序
 _思路：_
 * 迭代
@@ -102,7 +102,7 @@ public:
 ```
 
 ## 线性表链式存储
-### 定义
+## 定义
 ```cpp
 typedef struct LNode{
     ElemType data;
@@ -170,7 +170,7 @@ node*Creat(int Count)
     return(head);
 }
 ```
-### 习题
+## 习题
 ### [3.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
 

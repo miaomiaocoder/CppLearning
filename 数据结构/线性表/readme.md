@@ -465,7 +465,117 @@ public:
     }
 };
 ```
+### [10.环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+给定一个链表，判断链表中是否有环。
 
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+示例 1：
+```
+输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+
+3 → 2 → 0 → -4
+    ↑        ↓
+    ←  ←  ←  ←   
+```
+示例 2：
+```
+输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。
+```
+_思路1:_
+* 暴力遍历
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode* node = new ListNode(-1);
+        node->next = head;
+        ListNode* pre = node;
+        vector<ListNode*> v;
+        while(pre->next != NULL && pre->next->next != NULL){
+            v.push_back (pre->next);
+            pre = pre->next;
+            for(auto i = 0; i < v.size(); ++i){
+                if(v[i] == pre->next){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
+```
+_思路2:_
+* 双指针(快慢指针)
+* 如果存在环快慢指针会相遇
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+         if( head == nullptr){
+            return false;
+        }
+        ListNode* fast = head->next;
+        ListNode* slow = head;
+        while(slow != fast){
+            if(fast == nullptr || fast->next == nullptr){
+                return false;
+            }
+            fast = fast->next->next;
+            slow = slow->next;
+        }
+        return true;
+    }
+};
+```
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+         if( head == nullptr){
+            return false;
+        }
+        ListNode* fast = head;
+        ListNode* slow = head;
+        while(fast != nullptr && fast->next != nullptr){
+            fast = fast->next;
+            if(fast == slow){
+                return true;
+            }
+            fast = fast->next;
+            slow = slow->next;
+        }
+        return false;
+    }
+};
+```
 ## 王道习题
 
 

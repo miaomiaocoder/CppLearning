@@ -487,7 +487,7 @@ public:
 ```
 _思路1:_
 * 暴力遍历
-```
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {

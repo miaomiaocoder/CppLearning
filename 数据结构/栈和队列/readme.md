@@ -21,6 +21,11 @@ typedef struct{
 
 栈长：```S.top + 1```
 
+### 顺序栈基本操作(王道)
+```cpp
+
+```
+
 ## 两个栈共享空间
 ### 定义
 ```cpp
@@ -63,6 +68,10 @@ typedef struct{
 }SqQueue;
 ```
 
+### 循环队列的基本操作
+```cpp
+```
+
 ## 队列的链式存储
 ### 定义
 ```cpp
@@ -73,4 +82,8 @@ typedef struct{      //链式队列结点
 typedef struct{     //链式队列
     LinkNode *front, *rear;   //队列的队头和队尾指针
 }LinkQueue;
+```
+
+### 链式队列的基本操作
+```cpp
 ```

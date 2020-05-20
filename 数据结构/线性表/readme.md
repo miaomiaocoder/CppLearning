@@ -7,6 +7,10 @@ typedef struct{
     int length;
 }SList;
 ```
+## 顺序表操作实现（王道）
+```
+
+```
 ## 王道习题
 ### 7.两个增序的顺序表合并，使新的顺序表也是增序
 _思路：_
@@ -45,6 +49,10 @@ typedef struct LNode{
     ElemType data;
     struct LNode *next;
 }LNode, *LinkList;
+```
+## 链表操作实现（王道）
+```
+
 ```
 
 ### 1.头插法创建单链表

@@ -327,5 +327,254 @@ public:
 };
 ```
 ### [4.二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/)
-### [5.二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
+给定一个非空二叉树, 返回一个由每层节点平均值组成的数组.
+示例 1:
+```
+输入:
+    3
+   / \
+  9  20
+    /  \
+   15   7
+输出: [3, 14.5, 11]
+解释:
+第0层的平均值是 3,  第1层是 14.5, 第2层是 11. 因此返回 [3, 14.5, 11].
+```
+注意：
+* 节点值的范围在32位有符号整数范围内。
 
+_思路：_
+* 用层次遍历的方法去实现即可
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<double> averageOfLevels(TreeNode* root) {
+        queue<TreeNode*> que;
+        vector<double> res;
+        if(root == nullptr){
+            return res;
+        }
+        que.push(root);
+        while(!que.empty()){
+            int len = que.size();
+            double sum = 0;
+            for(int i=0;i<len; i++){
+                TreeNode* p=que.front();
+                que.pop();
+                sum = sum + p->val;
+                if(p->left != NULL)
+                    que.push(p->left);
+                if(p->right != NULL)
+                    que.push(p->right);  
+            }
+            res.push_back(sum/len);
+        }
+        return res;
+    }
+};
+```
+### [5.二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
+给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
+
+示例：```[3,9,20,null,null,15,7]```,
+```html
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+返回其层次遍历结果：
+```
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+```
+_思路:_
+* 使用队列
+* 每一层结点入队马上出队即可
+```cpp
+//cpp实现
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        queue<TreeNode*> dq;
+        vector<vector<int>> result;
+        if (!root) 
+            return result;
+        dq.push(root);
+        while(!dq.empty()){
+            int len = dq.size();
+            result.push_back(vector<int>());
+            for(int i=0;i<len; i++){
+                TreeNode* p=dq.front();
+                dq.pop();
+                result.back().push_back(p->val);
+                if(p->left != NULL)
+                    dq.push(p->left);
+                if(p->right != NULL)
+                    dq.push(p->right);  
+            }
+        }
+        return result;
+    }
+};
+```
+### [6.二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+给定一个二叉树，找出其最大深度。
+
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+说明: 叶子节点是指没有子节点的节点。
+
+示例：
+给定二叉树 ```[3,9,20,null,null,15,7]```，
+```html
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+返回它的最大深度 3 。
+
+_思路1：_
+* 递归的思路做
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root == nullptr){
+            return 0;
+        }
+        return max(maxDepth(root->left), maxDepth(root->right)) + 1;   
+    }
+};
+```
+_思路2：_
+* 层次遍历，计算层数
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        queue<TreeNode*> que;
+        TreeNode* ptr = root;
+        if(!root)
+            return 0;
+        int res = 0; 
+        que.push(root);
+        while(!que.empty()){
+            int len = que.size();
+            res = res + 1;
+            for(auto i = 0; i < len; i++){
+                ptr = que.front();
+                que.pop();
+                if(ptr->left != nullptr){
+                    que.push(ptr->left);
+                }
+                if(ptr->right != nullptr){
+                    que.push(ptr->right);
+                }
+            }
+        }
+        return res;  
+    }
+};
+```
+### [7.二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
+给定一个二叉树，找出其最小深度。
+
+最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+
+说明: 叶子节点是指没有子节点的节点。
+
+示例:
+
+给定二叉树 ```[3,9,20,null,null,15,7]```,
+
+```html
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+_思路1：_
+* 采用层次遍历的方法，当遍历到一个结点是叶结点时候，跳出循环
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+        queue<TreeNode*> que;
+        TreeNode* ptr = root;
+        if(!root)
+            return 0;
+        int res = 0; 
+        que.push(root);
+        while(!que.empty()){
+            int len = que.size();
+            res = res + 1;
+            for(auto i = 0; i < len; i++){
+                ptr = que.front();
+                que.pop();
+                if(ptr -> left == nullptr && ptr -> right == nullptr)
+                    return res;
+                if(ptr->left != nullptr){
+                    que.push(ptr->left);
+                }
+                if(ptr->right != nullptr){
+                    que.push(ptr->right);
+                }
+            }
+        }
+        return res;
+    }
+};
+```

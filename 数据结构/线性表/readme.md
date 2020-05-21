@@ -584,6 +584,175 @@ public:
     }
 };
 ```
+
+### [11.旋转链表](https://leetcode-cn.com/problems/rotate-list/)
+给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+
+示例 1:
+```
+输入: 1->2->3->4->5->NULL, k = 2
+输出: 4->5->1->2->3->NULL
+解释:
+向右旋转 1 步: 5->1->2->3->4->NULL
+向右旋转 2 步: 4->5->1->2->3->NULL
+```
+示例 2:
+```
+输入: 0->1->2->NULL, k = 4
+输出: 2->0->1->NULL
+解释:
+向右旋转 1 步: 2->0->1->NULL
+向右旋转 2 步: 1->2->0->NULL
+向右旋转 3 步: 0->1->2->NULL
+向右旋转 4 步: 2->0->1->NULL
+```
+_思路：_
+* 快慢指针
+* 将链表闭合成环
+* 找到相应的位置断开这个环，确定新的链表头和链表尾
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+      if(!head){
+          return nullptr;
+      }
+      int length = 0;
+      ListNode* p = head;
+      while(p){ 
+          p = p->next;
+          length++;
+      }
+      /*
+      while(head){
+          head = head->next;
+          length++;
+      }       //此求链表长度做法错误，改变了头节点位置，会对下面产生影响
+      */
+      k%=length;
+      auto fast = head;
+      auto low = head;
+      while(k--){
+          fast = fast->next;
+      }
+      while(fast->next){
+          fast = fast->next;
+          low = low->next;
+      }
+      fast->next = head; //快指针指向头节点，完成旋转
+      head = low->next; //head 指向 low->next,头结点指向确认
+      low->next = nullptr; //尾节点指向确认
+      return head;
+    }
+};
+```
+### [12.环形链表](https://leetcode-cn.com/problems/linked-list-cycle-ii/submissions/)
+给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+
+说明：不允许修改给定的链表。
+示例 1：
+```
+输入：head = [3,2,0,-4], pos = 1
+输出：tail connects to node index 1
+解释：链表中有一个环，其尾部连接到第二个节点。
+
+3 → 2 → 0 → -4
+    ↑        ↓
+    ←  ←  ←  ←   
+```
+示例 2：
+```
+输入：head = [1], pos = -1
+输出：no cycle
+解释：链表中没有环。
+```
+_思路1：_
+* 暴力遍历
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        ListNode* node = new ListNode(-1);
+        node->next = head;
+        ListNode* pre = node;
+        vector<ListNode*> v;
+        while(pre->next != NULL && pre->next->next != NULL){
+            v.push_back (pre->next);
+            pre = pre->next;
+            for(auto i = 0; i < v.size(); ++i){
+                if(v[i] == pre->next){
+                    return v[i];
+                }
+            }
+        }
+        return nullptr; 
+    }
+};
+```
+### [13.回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
+请判断一个链表是否为回文链表。
+
+示例 1:
+```
+输入: 1->2
+输出: false
+```
+示例 2:
+```
+输入: 1->2->2->1
+输出: true
+```
+进阶：
+你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+
+_思路1:_
+* 把链表值转换成数组里
+* 用双指针从两头向中间遍历
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+       vector<int> v;
+       ListNode* ptr = head;
+       while(ptr){
+           v.push_back(ptr->val);
+           ptr = ptr->next; 
+       }
+       int len = v.size();
+       for(auto i = 0; i<len/2; i++){
+           if(v[i] != v[len-1-i])
+               return false;
+       }
+       return true;
+    }
+}; 
+```
 ## 王道习题
 
 

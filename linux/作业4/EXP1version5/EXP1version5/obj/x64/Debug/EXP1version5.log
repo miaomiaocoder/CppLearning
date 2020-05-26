@@ -1,0 +1,48 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.56.1'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  CLSerializer.cpp
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(14,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(14,20): warning :   for (int i = 0; i < m_vpSerializable.size(); i++) {
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(14,20): warning :                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(29,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(29,20): warning :   for (int i = 0; i < vSerializable.size(); i++) {
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(29,20): warning :                   ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(38,16): warning : conversion to ‘unsigned int’ from ‘std::vector<ILSerClass*>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(38,16): warning :   iSize = iSize + 16 * vSerializable.size();
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(38,16): warning :           ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(44,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(44,20): warning :   for (int i = 0; i < vSerializable.size(); i++)
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(44,20): warning :                   ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(98,17): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(98,17): warning :    for (i = 0; i < m_vpSerializable.size(); i++)
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(98,17): warning :                ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(111,31): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(111,31): warning :    if (m_vpSerializable.size() == i)
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLSerializer.cpp(111,31): warning :        ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+  CLUUID.cpp
+  ILSerializer.cpp
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): warning : possible problem detected in invocation of delete operator: [-Wdelete-incomplete]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): warning :   delete m_pMedium;
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): warning :          ^~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): warning : invalid use of incomplete type ‘class ILMediumForSerialization’
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.h(8,7): message : forward declaration of ‘class ILMediumForSerialization’
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.h(8,7): message :  class ILMediumForSerialization;
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.h(8,7): message :        ^~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): message : neither the destructor nor the class-specific operator delete will be called, even if they are declared when the class is defined
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): message :   delete m_pMedium;
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ILSerializer.cpp(8,9): message :          ^~~~~~~~~
+  main.cpp
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLFileMediumForSerialization.h(41,18): warning : conversion to ‘unsigned int’ from ‘__off_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLFileMediumForSerialization.h(41,18): warning :    objssize = buf.st_size;
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\CLFileMediumForSerialization.h(41,18): warning :               ~~~~^~~~~~~
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ClassA.h(48,2): warning : no return statement in function returning non-void [-Wreturn-type]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ClassA.h(48,2): warning :   }
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\ClassA.h(48,2): warning :   ^
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\main.cpp(30,21): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\main.cpp(30,21): warning :    for (int i = 0; i < v.size(); i++)
+C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\main.cpp(30,21): warning :                    ~~^~~~~~~~~~
+  Linking objects
+  EXP1version5.vcxproj -> C:\Users\ren40\Desktop\作业\2020年-unix-作业报告\实验1\EXP1version5\EXP1version5\bin\x64\Debug\EXP1version5.out

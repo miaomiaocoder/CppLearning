@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CLUUID.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ILSerializer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="CLSerializer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Status.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="CLUUID.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ILSerClass.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ILSerializer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassA.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="ILMediumForSerialization.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="CLSerializer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="CLFileMediumForSerialization.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{e52ab678-4c8d-418e-8350-96e89ad6346d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{3cd00232-d203-4084-ae45-cf6326dba4be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{0a01fbfd-6615-43e0-b6fe-d33d5ad5b38a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

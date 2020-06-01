@@ -1,10 +1,10 @@
 #include<iostream>
-#include"CPlugin.h"
+#include"IPlugin.h"
 
 using namespace std;
 
 class Plugin:
-	public CPlugin
+	public IPlugin
 {
 public:
 	Plugin()
@@ -19,15 +19,15 @@ public:
 	}
 	virtual void Help()
 	{
-		cout << "This func prints 'Hello China!'" <<endl;
+		cout <<"Func id:2 " << "This func prints 'Hello China!'" <<endl;
 	}
 	virtual int GetID()
 	{
 		return 2;
 	}
 };
-extern "C" CPlugin* GetInterface()
+extern "C" void GetInterface(IPlugin **ppPlugin)
 {
 	static Plugin plugin;
-	return &plugin;
+	*ppPlugin = &plugin;
 }

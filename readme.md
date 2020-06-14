@@ -37,6 +37,9 @@
 ## linux/作业五
 * 插件系统
 
+## [linux/综合练习](linux/综合练习/readme.md)
+* 插件系统综合版
+
 ##  solution1/project1  
 * c++头文件(ps:如何实现头文件防卫) 
 * auto, 内存分配

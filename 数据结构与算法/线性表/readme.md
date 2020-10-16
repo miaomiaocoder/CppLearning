@@ -755,7 +755,49 @@ public:
 ```
 ## 王道习题
 
+## 课外习题
 
+### 1.两个单增链表合并成单减链表
+
+思路：
+* 头插法
+```cpp
+class Solution {
+public:
+    LisNode* func(ListNode* la, ListNode* lb) {
+        ListNode* pa = la->next;
+        ListNode* pb = lb->next;
+        ListNode* r;
+        la->next = nullptr;
+        while(pa && pb){
+            if(pa->data >= pb->data){
+                r = pa->next;
+                pa->next = la->next;
+                la->next = pa;
+                pa = r;
+            }else{
+                r = pb->next;
+                pb->next = la->next;
+                la->next = pb;
+                pb = r;
+            }
+        }
+        while(pa != nullptr){
+            r = pa->next;
+            pa->next = la->next;
+            la->next = pa;
+            pa = r;
+        }
+         while(pb != nullptr){
+            r = pb->next;
+            pb->next = la->next;
+            la->next = pb;
+            pb = r;
+        }
+        return la;
+    }
+}; 
+```
 
 
 

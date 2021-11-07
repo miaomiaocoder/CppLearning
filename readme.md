@@ -1,7 +1,7 @@
 # cpp_learning  
 学习c++各个部分的敲的代码     
 涉及c++基本语言，基本的类，模板与泛型，智能指针，并发与多线程，c++内存，STL等知识  
-## 本人学习c++时主要参考教程(也极力推荐)：  
+## 本人学习c++时主要参考教程：  
 ### [c++入门教程](http://c.biancheng.net/cplus/)
 ### [STL教程：C++ STL快速入门](http://c.biancheng.net/stl/)
 ### [C++11教程：C++11新特性大汇总](http://c.biancheng.net/cplus/11/)

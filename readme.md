@@ -8,7 +8,6 @@
 ### [2020 重学C++重构你的C++知识体系](https://coding.imooc.com/learn/list/414.html)
 ### [c++从入门到精通 c++11/14/17](https://study.163.com/course/courseMain.htm?courseId=1005735020&share=1&shareId=1030120374)
 ### [cppreference.com](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
-### [C语言深度剖析【进阶篇】](http://c.biancheng.net/cpp/u/cjinjie/list_48_4.html)
 ### [现代c++30讲](https://time.geekbang.org/column/intro/256)
 
 ## 目录
